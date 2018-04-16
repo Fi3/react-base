@@ -1,0 +1,35 @@
+{
+  "name": "react-base",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.1.2",
+    "babel-loader": "^7.1.2",
+    "babel-preset-react": "^6.24.1",
+    "css-loader": "^0.28.7",
+    "eslint": "^4.14.0",
+    "eslint-plugin-flowtype": "^2.40.1",
+    "eslint-plugin-react": "^7.5.1",
+    "file-loader": "^1.1.6",
+    "flow-bin": "^0.62.0",
+    "style-loader": "^0.19.1",
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.9.7"
+  },
+  "dependencies": {
+    "deep-diff": "^0.3.8",
+    "ramda": "^0.25.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-redux": "^5.0.6",
+		"recompose": "^0.26.0",
+    "redux": "^3.7.2"
+  },
+  "scripts": {
+    "build": "./node_modules/webpack/bin/webpack.js --config webpack.config.js",
+    "start": "./node_modules/webpack-dev-server/bin/webpack-dev-server.js --config webpack.config.js --hot",
+    "flow": "./node_modules/.bin/flow"
+  }
+}
