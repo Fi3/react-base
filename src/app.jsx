@@ -3,30 +3,6 @@ import Diff from 'deep-diff';
 import React from 'react'; // eslint-disable-line no-unused-vars
 import ReactDom from 'react-dom';
 import { createStore } from 'redux';
-import { append
-       , filter
-       , map
-       , sortBy
-       , compose
-       , toLower
-       , prop
-       , contains
-       , keys
-       , mapObjIndexed
-       , merge
-       , values
-       , assoc
-       , reduce
-       , replace
-       , join
-       , times
-       , curry
-       , length
-       , indexOf
-       , match
-       , split
-       , prepend
-       } from 'ramda';
 
 // UTILS --section
 
@@ -81,7 +57,7 @@ const reducer = (state: Model, action: Action): Model => {
 
   switch (action.type) {
   case 'ActionUpdateTitle': {
-    return assign(state, {members: append(action.title, state.title)});}
+    return assign(state, {title: action.title});}
 
   // trick to have flow errors when we do not handle all the action types
   default:
@@ -92,6 +68,12 @@ const reducer = (state: Model, action: Action): Model => {
 
 
 // VIEWS --section
+
+const App = () => { // eslint-disable-line no-unused-vars
+  return (
+    <h1>CIAO</h1>
+  );
+};
 
 // BOOTSTRAP THE APP --section
 
@@ -110,3 +92,4 @@ const getState = (store): Model => store.getState();
 
 //$FlowFixMe
 ReactDom.render(<App store={store.getState()}/>, mountNode);
+
