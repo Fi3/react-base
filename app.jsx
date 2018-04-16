@@ -107,3 +107,6 @@ const initialState: Model =
 const mountNode = document.getElementById('main');
 const store = createStore(reducer, initialState);
 const getState = (store): Model => store.getState();
+
+//$FlowFixMe
+ReactDom.render(<App store={store.getState()}/>, mountNode);
